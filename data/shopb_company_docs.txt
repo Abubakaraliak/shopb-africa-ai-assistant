@@ -1,0 +1,616 @@
+
+SHOPB.AFRICA
+COMPANY KNOWLEDGE BASE
+Version: 1.0
+Status: Demonstration / Proposed Policies
+Purpose: AI Customer Support Assistant and RAG Retrieval
+Last Updated: September 2026
+
+==================================================
+SECTION 1: COMPANY OVERVIEW
+==================================================
+
+Company Name: ShopB.Africa
+Business Type: Multi-vendor e-commerce marketplace
+Primary Market: Africa (initial demonstration focused on Nigeria)
+Website: https://shopb.africa
+Business Model: Online marketplace connecting customers with independent vendors.
+
+ABOUT SHOPB.AFRICA
+
+ShopB.Africa is a multi-vendor e-commerce platform designed to help customers discover, compare and purchase products from trusted sellers. The platform provides a digital marketplace where vendors can showcase their products and customers can shop conveniently online.
+
+The marketplace aims to provide a convenient shopping experience, accessible product discovery, secure transactions, reliable order processing and customer support.
+
+CORE SERVICES
+
+1. Online product browsing and discovery.
+2. Multi-vendor product listings.
+3. Customer registration and account management.
+4. Online ordering and checkout.
+5. Payment processing through supported payment channels.
+6. Order tracking and delivery coordination.
+7. Customer support and complaint resolution.
+8. Vendor registration and product management.
+
+IMPORTANT MARKETPLACE PRINCIPLE
+
+ShopB.Africa operates as a marketplace connecting buyers and independent sellers. Product availability, pricing, packaging and certain fulfilment arrangements may depend on the individual vendor and the applicable marketplace policies.
+
+The AI assistant must not invent products, prices, promotions, stock availability or delivery commitments. It should direct customers to current listings or an authorized support representative when live information is required.
+
+==================================================
+SECTION 2: PRODUCTS AND CATEGORIES
+==================================================
+
+PRODUCT CATEGORIES
+
+The demonstration marketplace supports the following illustrative product categories:
+
+1. Electronics and gadgets
+   - Mobile phones
+   - Chargers and cables
+   - Headphones and accessories
+   - Computer accessories
+
+2. Fashion and clothing
+   - Men's clothing
+   - Women's clothing
+   - Footwear
+   - Bags and accessories
+
+3. Home and kitchen
+   - Kitchen utensils
+   - Household appliances
+   - Home decoration
+   - Storage products
+
+4. Beauty and personal care
+   - Skincare products
+   - Hair care products
+   - Personal grooming accessories
+
+5. Food and groceries
+   - Packaged food
+   - Household groceries
+   - Selected food products
+
+6. Sports and lifestyle
+   - Fitness accessories
+   - Sports equipment
+   - Outdoor lifestyle products
+
+PRODUCT AVAILABILITY
+
+Products are listed by participating vendors. Availability may change as vendors update their inventory.
+
+Customers should check the current product listing before placing an order.
+
+The AI assistant must not confirm that a product is in stock unless connected to an authoritative, live inventory source.
+
+PRODUCT PRICING
+
+Product prices are determined by vendors and displayed on the marketplace.
+
+Prices may change before an order is placed. Any applicable delivery charges, discounts or other fees should be shown during checkout or in the relevant order information.
+
+The AI assistant must not invent prices or promise discounts.
+
+PRODUCT QUALITY AND DESCRIPTIONS
+
+Customers should review product descriptions, specifications, photographs, sizes, colours and vendor information before purchasing.
+
+Where a product does not match its description, customers may submit a complaint through the proposed customer support process.
+
+==================================================
+SECTION 3: CUSTOMER REGISTRATION AND ACCOUNTS
+==================================================
+
+ACCOUNT REGISTRATION
+
+Customers may create an account using the registration options provided by the marketplace.
+
+Illustrative registration information includes:
+- Full name
+- Email address
+- Phone number
+- Password
+- Delivery address, when required
+
+Customers should provide accurate information to support order processing and delivery.
+
+ACCOUNT LOGIN
+
+Registered customers can sign in through the website's available login interface.
+
+If a customer cannot access an account, the assistant should recommend using the official password recovery feature, if available.
+
+PASSWORD SECURITY
+
+Customers should:
+- Use a strong, unique password.
+- Never share passwords or one-time verification codes.
+- Avoid signing in on untrusted devices.
+- Contact authorized support if they suspect account compromise.
+
+ACCOUNT INFORMATION
+
+Customers should review and update their account information through the available account settings.
+
+The AI assistant must never request a customer's password, full payment card number, PIN or one-time password.
+
+ACCOUNT ACCESS ISSUES
+
+If a customer experiences a login problem:
+1. Confirm that the email address or phone number is correct.
+2. Check the internet connection.
+3. Use the password recovery option, if available.
+4. Retry using a supported browser.
+5. Contact customer support if the issue continues.
+
+==================================================
+SECTION 4: ORDERING PROCESS
+==================================================
+
+HOW TO PLACE AN ORDER
+
+Customers can follow these general marketplace steps:
+
+Step 1: Visit the ShopB.Africa website.
+Step 2: Browse or search for the desired product.
+Step 3: Review the product description, price and vendor details.
+Step 4: Select the desired product options, such as size or colour, where available.
+Step 5: Add the product to the shopping cart.
+Step 6: Review the cart and quantities.
+Step 7: Sign in or complete the available checkout process.
+Step 8: Enter or confirm the delivery information.
+Step 9: Select an available payment method.
+Step 10: Review the order summary and submit the order.
+Step 11: Keep the order reference for future enquiries.
+
+ORDER CONFIRMATION
+
+An order should be considered confirmed only when the marketplace's order system indicates that it has been successfully placed.
+
+Customers should refer to their order history or confirmation notification, where available.
+
+ORDER STATUS
+
+Illustrative order statuses include:
+
+- Pending: The order has been received but is awaiting further processing.
+- Confirmed: The order has been accepted for processing.
+- Processing: The order is being prepared.
+- Shipped: The order has been dispatched.
+- Out for Delivery: The order is with the delivery service for final delivery.
+- Delivered: The order has been marked as delivered.
+- Cancelled: The order has been cancelled.
+- Returned: The item has entered the applicable return process.
+
+Actual status names and availability must be verified against the live marketplace system.
+
+ORDER MODIFICATION
+
+Customers who need to change an order should contact support as soon as possible.
+
+Order changes may not be possible after processing, dispatch or fulfilment has started.
+
+The AI assistant must not promise that an order can be modified or cancelled without checking its current status and applicable policy.
+
+==================================================
+SECTION 5: PAYMENT POLICIES
+==================================================
+
+SUPPORTED PAYMENT METHODS
+
+The demonstration marketplace may support payment methods such as:
+
+- Debit cards
+- Credit cards
+- Bank transfers
+- Approved digital payment channels
+
+The actual payment options available to a customer depend on the live checkout system.
+
+PAYMENT SECURITY
+
+Customers should make payments only through the payment options officially presented by the marketplace.
+
+Customers should never share their card PIN, password, one-time password or other confidential payment credentials with the chatbot, vendors or unauthorized individuals.
+
+PAYMENT CONFIRMATION
+
+After completing payment, customers should check the marketplace's order confirmation or payment status.
+
+A bank debit alone does not necessarily establish that an order has been successfully confirmed.
+
+FAILED OR PENDING PAYMENTS
+
+If a payment appears unsuccessful or remains pending:
+
+1. Check the payment status in the marketplace.
+2. Review any payment confirmation or transaction reference.
+3. Avoid repeatedly submitting payments while the original transaction is unresolved.
+4. Contact authorized customer support with the order reference and relevant transaction details.
+
+DUPLICATE PAYMENTS
+
+If a customer believes they have been charged more than once for a single order, they should contact support and provide the order reference and relevant transaction evidence.
+
+The support team should investigate the transaction records before confirming whether a duplicate charge occurred.
+
+PAYMENT REFUNDS
+
+Payment refunds, where approved, should be processed according to the applicable refund policy and payment provider's procedures.
+
+The AI assistant must not guarantee a refund date or claim that a refund has been issued without verified transaction information.
+
+==================================================
+SECTION 6: SHIPPING AND DELIVERY
+==================================================
+
+DELIVERY COVERAGE
+
+The demonstration marketplace is designed for delivery within supported service areas.
+
+Actual delivery availability depends on the customer's address, vendor fulfilment arrangements and the delivery service.
+
+DELIVERY TIMELINES
+
+Proposed demonstration delivery estimates:
+
+- Major supported cities: 2–5 business days.
+- Other supported locations: 5–10 business days.
+- Remote or difficult-to-access locations: Delivery may take longer.
+
+These estimates are illustrative and must be replaced with approved, operational delivery commitments before production use.
+
+Delivery times may be affected by:
+- Vendor preparation time
+- Customer location
+- Courier availability
+- Public holidays
+- Weather or transportation disruptions
+- Incorrect or incomplete delivery details
+
+DELIVERY FEES
+
+Delivery fees may depend on the destination, order size, vendor and selected delivery service.
+
+Customers should review the delivery charge displayed during checkout or in their order details.
+
+ORDER TRACKING
+
+Customers should use the available order history or tracking functionality to monitor their orders.
+
+If tracking information is unavailable or appears incorrect, customers should contact support with their order reference.
+
+FAILED DELIVERY
+
+If delivery cannot be completed, the customer should verify their delivery address and contact details and follow the instructions provided by the delivery service or customer support.
+
+The AI assistant must not claim a parcel has been dispatched, delayed or delivered unless supported by verified order information.
+
+==================================================
+SECTION 7: RETURNS, CANCELLATIONS AND REFUNDS
+==================================================
+
+RETURN POLICY
+
+For this demonstration, customers may request a return within 7 calendar days of receiving an eligible product.
+
+This is a proposed example policy, not a verified ShopB.Africa rule.
+
+A return request may be considered when:
+- The item is damaged upon arrival.
+- The wrong product was delivered.
+- The product materially differs from its listing.
+- The product has a qualifying manufacturing defect.
+
+Return eligibility depends on the approved policy, product category, item condition and applicable consumer protection requirements.
+
+NON-RETURNABLE ITEMS
+
+Certain categories may have restrictions for hygiene, safety, perishability or other legitimate reasons.
+
+The actual exclusions must be established by the marketplace and disclosed to customers before purchase.
+
+RETURN REQUEST PROCESS
+
+Step 1: Contact customer support through an approved channel.
+Step 2: Provide the order reference and explain the issue.
+Step 3: Submit photographs or other evidence if requested.
+Step 4: Follow the support team's return instructions.
+Step 5: Send or hand over the item using the approved return procedure, if authorized.
+Step 6: Await inspection and a decision on the request.
+
+ITEM CONDITION
+
+Returned items may be required to include original packaging, accessories, labels or other supplied components, subject to the applicable policy and consumer rights.
+
+REFUND PROCESS
+
+For this demonstration, an approved refund is proposed to be initiated within 5–10 business days after the returned item has been received and inspected.
+
+Actual refund timing may vary depending on the payment provider and approved operational procedures.
+
+Refunds should ordinarily be made through the original payment method where supported and appropriate.
+
+ORDER CANCELLATION
+
+Customers may request cancellation before an order enters a fulfilment stage where cancellation is permitted.
+
+Cancellation requests made after dispatch may need to follow the applicable return procedure.
+
+The assistant must not state that a cancellation or refund has been approved until the relevant system or authorized support representative confirms it.
+
+==================================================
+SECTION 8: VENDOR REGISTRATION AND POLICIES
+==================================================
+
+ABOUT VENDORS
+
+Vendors are independent sellers who use the marketplace to display and sell products to customers.
+
+Vendor participation is subject to the marketplace's registration, verification and operating requirements.
+
+VENDOR REGISTRATION
+
+A prospective vendor may be asked to provide:
+
+- Full name or registered business name
+- Valid contact information
+- Business or identity verification information, where required
+- Product categories
+- Product descriptions and images
+- Payment settlement information
+- Acceptance of applicable vendor terms
+
+The exact documentation and verification requirements must be confirmed by ShopB.Africa.
+
+PRODUCT LISTING REQUIREMENTS
+
+Vendors should:
+- Provide accurate product descriptions.
+- Use genuine and representative product images.
+- Display accurate prices.
+- Maintain current stock information.
+- Avoid misleading claims.
+- Comply with applicable laws and marketplace policies.
+- Avoid listing prohibited or restricted goods.
+
+ORDER FULFILMENT
+
+Vendors are expected to process accepted orders in accordance with the marketplace's approved fulfilment requirements.
+
+They should maintain accurate inventory and promptly communicate fulfilment issues through the appropriate marketplace channels.
+
+CUSTOMER COMMUNICATION
+
+Vendors should communicate respectfully and professionally with customers and follow the platform's approved communication rules.
+
+They must not request sensitive payment credentials or direct customers to unauthorized payment channels.
+
+VENDOR PERFORMANCE
+
+The marketplace may monitor vendor performance using indicators such as:
+- Order fulfilment
+- Product accuracy
+- Customer complaints
+- Cancellation rates
+- Policy compliance
+- Customer feedback
+
+Any enforcement action must follow the actual vendor agreement and applicable platform procedures.
+
+VENDOR PAYMENTS
+
+Vendor settlements should be made according to the marketplace's verified settlement terms, transaction reconciliation procedures and applicable fees.
+
+The chatbot must not invent commission rates, settlement schedules or vendor charges.
+
+==================================================
+SECTION 9: CUSTOMER SUPPORT
+==================================================
+
+CUSTOMER SUPPORT PURPOSE
+
+Customer support assists with general enquiries, account access, order issues, payment concerns, delivery problems, return requests and marketplace usage.
+
+SUPPORT TOPICS
+
+The AI assistant can provide general information about:
+- How to shop on the marketplace
+- How to create an account
+- How to place an order
+- General payment procedures
+- Delivery policy
+- Return and refund procedures
+- Vendor registration information
+- Frequently asked questions
+
+ISSUES REQUIRING HUMAN SUPPORT
+
+The assistant should refer customers to an authorized support representative when the enquiry involves:
+
+1. A disputed payment.
+2. An account security incident.
+3. A missing or potentially lost order.
+4. A complex refund or return dispute.
+5. A suspected fraudulent listing or seller.
+6. A legal or regulatory complaint.
+7. A request involving confidential account or payment information.
+8. An issue requiring access to live order or transaction records.
+9. An unresolved complaint or exception to policy.
+
+SUPPORT REQUEST INFORMATION
+
+When requesting assistance, customers may be asked for:
+- Order reference
+- Registered contact details, through a secure approved channel
+- A brief description of the problem
+- Relevant screenshots or transaction references, with sensitive information removed
+
+The chatbot should collect only information necessary to handle the enquiry.
+
+SUPPORT CONTACT
+
+Official support email: Not yet verified.
+Official support phone: Not yet verified.
+Live chat availability: Not yet verified.
+Operating hours: Not yet verified.
+
+The AI assistant must not fabricate support contact details or claim that a particular channel is active.
+
+==================================================
+SECTION 10: FREQUENTLY ASKED QUESTIONS
+==================================================
+
+Q1: What is ShopB.Africa?
+
+A: ShopB.Africa is a multi-vendor e-commerce marketplace where customers can discover and purchase products from participating sellers.
+
+Q2: How do I buy a product?
+
+A: Browse the marketplace, select a product, review its details, add it to your cart and complete the checkout process using an available payment method.
+
+Q3: Can I buy from different vendors?
+
+A: The marketplace is designed to support multiple vendors. Product availability, order grouping and delivery arrangements depend on the live platform's functionality.
+
+Q4: How can I track my order?
+
+A: Check your order history or the available tracking feature. If tracking information is unavailable, contact customer support with your order reference.
+
+Q5: How long does delivery take?
+
+A: The proposed demonstration policy estimates 2–5 business days for major supported cities and 5–10 business days for other supported locations. Actual approved delivery estimates must be confirmed before deployment.
+
+Q6: What payment methods are available?
+
+A: Payment methods depend on the options presented at checkout. Use only payment channels officially supported by the marketplace.
+
+Q7: What should I do if my payment fails?
+
+A: Check your order and payment status first. If the issue remains unresolved, contact authorized support with your order reference and transaction details. Avoid making repeated payments while the original transaction is pending.
+
+Q8: Can I cancel an order?
+
+A: You may request cancellation, subject to the order's current fulfilment status and the applicable cancellation policy. Contact support promptly.
+
+Q9: Can I return a product?
+
+A: The demonstration policy proposes a 7-calendar-day return request period for eligible items. Actual eligibility and timelines must follow the approved marketplace policy.
+
+Q10: When will I receive my refund?
+
+A: Under the illustrative policy, an approved refund may be initiated within 5–10 business days after receipt and inspection of the returned item. Actual timing depends on the approved procedure and payment provider.
+
+Q11: How do I become a vendor?
+
+A: Prospective vendors should use the marketplace's official vendor registration process, if available, and follow the applicable verification and onboarding requirements.
+
+Q12: What should I do if I receive a damaged item?
+
+A: Document the damage, keep the packaging and contact customer support with your order reference and relevant photographs. Follow the authorized return or complaint procedure.
+
+Q13: What if my order has not arrived?
+
+A: Check the order status and tracking information. Verify your delivery details and contact support if the estimated delivery period has passed or tracking is unavailable.
+
+Q14: Is it safe to share my password with customer support?
+
+A: No. Never share your password, card PIN or one-time verification code with anyone, including the AI assistant.
+
+Q15: Does the AI assistant have access to my order?
+
+A: The demonstration assistant uses company documentation and does not automatically access live order records. Order-specific information requires an authorized integration with the marketplace's order management system.
+
+==================================================
+SECTION 11: PRIVACY AND SECURITY
+==================================================
+
+CUSTOMER PRIVACY
+
+The marketplace should collect, process, store and use customer information in accordance with its approved privacy policy and applicable data protection laws.
+
+The chatbot must not invent privacy commitments or claim certifications that have not been verified.
+
+DATA MINIMIZATION
+
+The AI assistant should request only information necessary to respond to an enquiry.
+
+Customers should not submit:
+- Passwords
+- Payment card PINs
+- One-time passwords
+- Full payment card credentials
+- Unnecessary identity documents
+- Other sensitive information not required for the support request
+
+ACCOUNT SECURITY
+
+If a customer reports suspicious account activity, the assistant should recommend securing the account through approved account recovery or security procedures and escalating the incident to authorized support.
+
+AI DATA HANDLING
+
+Before production deployment, the business should approve:
+- What customer data is sent to the AI provider.
+- What conversation information is stored.
+- Data retention periods.
+- Access controls.
+- Logging and monitoring procedures.
+- Procedures for handling deletion and privacy requests.
+- Appropriate vendor and service provider agreements.
+
+The demonstration system should avoid storing unnecessary personal information in prompts, logs or vector databases.
+
+==================================================
+SECTION 12: AI ASSISTANT RULES AND ESCALATION
+==================================================
+
+AI ASSISTANT ROLE
+
+The ShopB.Africa AI Customer Support Assistant is designed to provide helpful, clear and accurate answers based on the approved company knowledge base.
+
+ANSWERING RULES
+
+1. Use retrieved company documentation as the primary source for company policies.
+2. Answer in simple, professional and friendly language.
+3. Keep answers relevant to the customer's question.
+4. Never invent company policies, prices, promotions, contact details or delivery commitments.
+5. Distinguish proposed demonstration policies from verified operational policies.
+6. If the knowledge base does not contain the answer, clearly state that the information is unavailable.
+7. Recommend an authorized human support representative when an issue requires human judgment or private account access.
+8. Never claim to have checked a customer's order unless a verified system integration has supplied the information.
+9. Never claim to have completed a refund, cancellation or payment reversal without authoritative confirmation.
+10. Never request passwords, PINs or one-time verification codes.
+
+ESCALATION PROCEDURE
+
+Step 1: Identify the customer's issue.
+Step 2: Search the company knowledge base for relevant information.
+Step 3: Provide an answer if sufficient approved information is available.
+Step 4: If the question is account-specific or requires a live transaction check, explain the limitation.
+Step 5: Direct the customer to an authorized support channel, once its details are verified.
+Step 6: If the customer reports a security incident, suspected fraud or urgent payment concern, prioritize the appropriate escalation procedure.
+
+WHEN INFORMATION IS MISSING
+
+The assistant should respond:
+
+"I couldn't find verified information about this in the ShopB.Africa knowledge base. To avoid giving you incorrect information, please contact the authorized customer support team for clarification."
+
+WHEN A CUSTOMER REQUESTS LIVE ORDER INFORMATION
+
+The assistant should respond:
+
+"I can explain ShopB.Africa's general order policies, but I don't currently have access to live order records. Please check your order history or contact customer support with your order reference."
+
+WHEN A CUSTOMER REPORTS A PAYMENT PROBLEM
+
+The assistant should respond:
+
+"I'm sorry you're experiencing a payment issue. Please check your order and payment status before trying again. If the issue persists, contact authorized support with your order reference and transaction details. Never share your PIN or one-time password."
+
+END OF COMPANY KNOWLEDGE BASE
