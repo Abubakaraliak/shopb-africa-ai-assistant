@@ -1,74 +1,69 @@
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from pydantic import BaseModel, Field
-from typing import Literal
-from rag_pipeline import ask_shopb
+from pydantic import BaseModel
+
+from backend.rag_pipeline import ask_shopb
 
 
 app = FastAPI(
-    title="ShopB.Africa AI Customer Support API",
-    description="RAG-powered customer support API for ShopB.Africa",
+    title="ShopB.Africa AI Customer Support Assistant",
+    description="RAG-powered customer support assistant for ShopB.Africa",
     version="1.0.0"
 )
 
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[
-        "http://localhost:5173"
-    ],
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
 
 
-
-class ChatMessage(BaseModel):
-    role: Literal["user", "assistant"]
-    content: str
-
 class ChatRequest(BaseModel):
     question: str
-    history: list[ChatMessage] = Field(default_factory=list)
+    history: list = []
+
+
+class ChatResponse(BaseModel):
+    answer: str
+    sources: list
+    search_query: str
+    assessment: str
+
 
 @app.get("/")
 def home():
     return {
-        "message": "ShopB.Africa AI Customer Support API is running"
+        "message": "ShopB.Africa AI Customer Support Assistant is running.",
+        "status": "online"
     }
 
 
-
-@app.post("/chat")
+@app.post("/chat", response_model=ChatResponse)
 def chat(request: ChatRequest):
-    question = request.question.strip()
 
-    if not question:
-        raise HTTPException(
-            status_code=400,
-            detail="Question cannot be empty."
+    result = ask_shopb(
+        question=request.question,
+        history=request.history
+    )
+
+    return {
+        "answer": result.get(
+            "answer",
+            "Sorry, I could not generate an answer."
+        ),
+        "sources": result.get(
+            "sources",
+            []
+        ),
+        "search_query": result.get(
+            "search_query",
+            request.question
+        ),
+        "assessment": result.get(
+            "assessment",
+            "unknown"
         )
-
-    try:
-        history = [
-            message.model_dump()
-            for message in request.history[-6:]
-        ]
-
-        result = ask_shopb(
-            question=question,
-            history=history
-        )
-
-        return {
-            "question": question,
-            "answer": result["answer"],
-            "sources": result["sources"]
-        }
-
-    except Exception as error:
-        raise HTTPException(
-            status_code=500,
-            detail=f"An error occurred: {str(error)}"
-        )
+    }
