@@ -7,7 +7,6 @@ langchain-core
 langchain-openai
 langchain-pinecone
 langchain-text-splitters
-simsimd==3.7.7
 
 openai
 pinecone
