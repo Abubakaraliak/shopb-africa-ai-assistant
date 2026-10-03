@@ -1,8 +1,9 @@
 import os
+
 from dotenv import load_dotenv
+from pinecone import Pinecone
 
 from langchain_openai import ChatOpenAI, OpenAIEmbeddings
-from langchain_pinecone import PineconeVectorStore
 from langchain_core.prompts import ChatPromptTemplate
 
 
@@ -29,55 +30,72 @@ embeddings = OpenAIEmbeddings(
 
 
 # ============================================================
-# 3. PINECONE VECTOR STORE
+# 3. PINECONE CONNECTION
 # ============================================================
 
-vector_store = PineconeVectorStore(
-    index_name="shopb-support",
-    embedding=embeddings
+PINECONE_API_KEY = os.getenv("PINECONE_API_KEY")
+PINECONE_INDEX_NAME = os.getenv(
+    "PINECONE_INDEX_NAME",
+    "shopb-support"
+)
+
+if not PINECONE_API_KEY:
+    raise ValueError(
+        "PINECONE_API_KEY is not configured."
+    )
+
+
+pc = Pinecone(
+    api_key=PINECONE_API_KEY
+)
+
+index = pc.Index(
+    PINECONE_INDEX_NAME
 )
 
 
 # ============================================================
-# 4. RETRIEVER
-# ============================================================
-
-retriever = vector_store.as_retriever(
-    search_kwargs={
-        "k": 3
-    }
-)
-
-
-# ============================================================
-# 5. FORMAT CONVERSATION HISTORY
+# 4. FORMAT CONVERSATION HISTORY
 # ============================================================
 
 def format_history(history):
+
     if not history:
         return "No previous conversation."
 
     formatted_history = []
 
     for message in history[-6:]:
-        role = message.get("role", "user")
-        content = message.get("content", "")
+
+        role = message.get(
+            "role",
+            "user"
+        )
+
+        content = message.get(
+            "content",
+            ""
+        )
 
         if role == "user":
+
             formatted_history.append(
                 f"User: {content}"
             )
 
         elif role == "assistant":
+
             formatted_history.append(
                 f"Assistant: {content}"
             )
 
-    return "\n".join(formatted_history)
+    return "\n".join(
+        formatted_history
+    )
 
 
 # ============================================================
-# 6. QUESTION REWRITING PROMPT
+# 5. QUESTION REWRITING PROMPT
 # ============================================================
 
 rewrite_prompt = ChatPromptTemplate.from_template(
@@ -108,7 +126,7 @@ rewrite_chain = rewrite_prompt | llm
 
 
 # ============================================================
-# 7. ANSWER PROMPT
+# 6. ANSWER PROMPT
 # ============================================================
 
 answer_prompt = ChatPromptTemplate.from_template(
@@ -148,7 +166,7 @@ answer_chain = answer_prompt | llm
 
 
 # ============================================================
-# 8. SUPPORT ASSESSMENT PROMPT
+# 7. SUPPORT ASSESSMENT PROMPT
 # ============================================================
 
 assessment_prompt = ChatPromptTemplate.from_template(
@@ -180,16 +198,20 @@ assessment_chain = assessment_prompt | llm
 
 
 # ============================================================
-# 9. EXTRACT SOURCES
+# 8. EXTRACT SOURCES
 # ============================================================
 
-def extract_sources(documents):
+def extract_sources(matches):
+
     sources = []
     seen_sources = set()
 
-    for document in documents:
+    for match in matches:
 
-        metadata = document.metadata or {}
+        metadata = match.get(
+            "metadata",
+            {}
+        ) or {}
 
         source_name = metadata.get(
             "source",
@@ -214,7 +236,9 @@ def extract_sources(documents):
 
         if source_key not in seen_sources:
 
-            seen_sources.add(source_key)
+            seen_sources.add(
+                source_key
+            )
 
             sources.append(
                 {
@@ -227,10 +251,71 @@ def extract_sources(documents):
 
 
 # ============================================================
-# 10. MAIN RAG FUNCTION
+# 9. SEARCH PINECONE
 # ============================================================
 
-def ask_shopb(question, history=None):
+def search_pinecone(query, top_k=3):
+
+    # Create query embedding
+    query_vector = embeddings.embed_query(
+        query
+    )
+
+    # Search Pinecone
+    results = index.query(
+        vector=query_vector,
+        top_k=top_k,
+        include_metadata=True
+    )
+
+    return results.get(
+        "matches",
+        []
+    )
+
+
+# ============================================================
+# 10. CREATE KNOWLEDGE CONTEXT
+# ============================================================
+
+def create_context(matches):
+
+    context_parts = []
+
+    for match in matches:
+
+        metadata = match.get(
+            "metadata",
+            {}
+        ) or {}
+
+        text = metadata.get(
+            "text",
+            metadata.get(
+                "page_content",
+                ""
+            )
+        )
+
+        if text:
+
+            context_parts.append(
+                text
+            )
+
+    return "\n\n---\n\n".join(
+        context_parts
+    )
+
+
+# ============================================================
+# 11. MAIN RAG FUNCTION
+# ============================================================
+
+def ask_shopb(
+    question,
+    history=None
+):
 
     try:
 
@@ -238,7 +323,9 @@ def ask_shopb(question, history=None):
         # STEP 1: Format conversation history
         # ----------------------------------------------------
 
-        history_text = format_history(history)
+        history_text = format_history(
+            history
+        )
 
 
         # ----------------------------------------------------
@@ -252,15 +339,19 @@ def ask_shopb(question, history=None):
             }
         )
 
-        search_query = rewrite_response.content.strip()
+        search_query = (
+            rewrite_response.content
+            .strip()
+        )
 
 
         # ----------------------------------------------------
         # STEP 3: Search Pinecone
         # ----------------------------------------------------
 
-        documents = retriever.invoke(
-            search_query
+        matches = search_pinecone(
+            search_query,
+            top_k=3
         )
 
 
@@ -268,7 +359,7 @@ def ask_shopb(question, history=None):
         # STEP 4: No documents found
         # ----------------------------------------------------
 
-        if not documents:
+        if not matches:
 
             return {
                 "answer": (
@@ -285,16 +376,8 @@ def ask_shopb(question, history=None):
         # STEP 5: Create knowledge context
         # ----------------------------------------------------
 
-        context_parts = []
-
-        for document in documents:
-
-            context_parts.append(
-                document.page_content
-            )
-
-        context = "\n\n---\n\n".join(
-            context_parts
+        context = create_context(
+            matches
         )
 
 
@@ -303,7 +386,7 @@ def ask_shopb(question, history=None):
         # ----------------------------------------------------
 
         sources = extract_sources(
-            documents
+            matches
         )
 
 
@@ -356,7 +439,10 @@ def ask_shopb(question, history=None):
             }
         )
 
-        answer = answer_response.content.strip()
+        answer = (
+            answer_response.content
+            .strip()
+        )
 
 
         # ----------------------------------------------------
