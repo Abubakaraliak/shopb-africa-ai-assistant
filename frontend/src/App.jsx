@@ -19,14 +19,13 @@ function App() {
     }
   });
 
-  const [activeChatId, setActiveChatId] = useState(() => {
-    return localStorage.getItem("shopb_active_chat") || null;
-  });
+  const [activeChatId, setActiveChatId] = useState(null);
 
   const [question, setQuestion] = useState("");
   const [loading, setLoading] = useState(false);
-  const [sidebarOpen, setSidebarOpen] = useState(true);
-
+  const [sidebarOpen, setSidebarOpen] = useState(() => {
+  return window.innerWidth > 768;
+});
   const messagesEndRef = useRef(null);
 
   // Get current chat
