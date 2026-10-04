@@ -180,19 +180,32 @@ Knowledge base context:
 Customer question:
 {question}
 
-If the context contains enough information to answer the
-question accurately, return:
+IMPORTANT:
+The context may contain demonstration policies, proposed estimates,
+FAQs, or conditional information. If the context provides a reasonable
+answer to the customer's question, consider it SUPPORTED.
+
+For example:
+- If the question asks about delivery time and the context provides
+  delivery estimates, return SUPPORTED.
+- If the question asks about payment methods and the context explains
+  that payment options are available at checkout, return SUPPORTED.
+- If the context contains relevant conditions or limitations, it is
+  still SUPPORTED as long as the customer's question can be answered
+  using that information.
+
+Only return INSUFFICIENT when the context genuinely contains no useful
+information for answering the question.
+
+Return ONLY one of these two words:
 
 SUPPORTED
 
-If the context does not contain enough information, return:
+or
 
 INSUFFICIENT
-
-Return ONLY one of these two words.
 """
 )
-
 
 assessment_chain = assessment_prompt | llm
 
