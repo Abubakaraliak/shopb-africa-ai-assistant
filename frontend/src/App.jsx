@@ -431,11 +431,11 @@ function App() {
                 <button
                   onClick={() =>
                     askSuggestion(
-                      "How long does delivery take?"
+                      "Explain your order process?"
                     )
                   }
                 >
-                  🚚 Delivery
+                  🚚 Order and Delivery
                 </button>
 
                 <button
