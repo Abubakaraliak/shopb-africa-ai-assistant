@@ -255,25 +255,38 @@ def extract_sources(matches):
 # ============================================================
 
 def search_pinecone(query, top_k=5):
+    query_vector = embeddings.embed_query(query)
 
-    # Create query embedding
-    query_vector = embeddings.embed_query(
-        query
-    )
-
-    # Search Pinecone
     results = index.query(
         vector=query_vector,
         top_k=top_k,
         include_metadata=True
     )
 
-    return results.get(
-        "matches",
-        []
-    )
+    matches = results.get("matches", [])
 
+    print("\n" + "=" * 80)
+    print("PINECONE SEARCH QUERY:")
+    print(query)
+    print("=" * 80)
 
+    for i, match in enumerate(matches, 1):
+        metadata = match.get("metadata", {}) or {}
+
+        print(f"\nMATCH {i}")
+        print("Score:", match.get("score"))
+        print("Source:", metadata.get("source"))
+        print("Section:", metadata.get("section"))
+        print("Text:")
+        print(
+            metadata.get(
+                "text",
+                metadata.get("page_content", "")
+            )[:1000]
+        )
+        print("-" * 80)
+
+    return matches
 # ============================================================
 # 10. CREATE KNOWLEDGE CONTEXT
 # ============================================================
