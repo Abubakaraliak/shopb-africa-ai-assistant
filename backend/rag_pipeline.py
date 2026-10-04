@@ -254,7 +254,7 @@ def extract_sources(matches):
 # 9. SEARCH PINECONE
 # ============================================================
 
-def search_pinecone(query, top_k=3):
+def search_pinecone(query, top_k=5):
 
     # Create query embedding
     query_vector = embeddings.embed_query(
@@ -351,7 +351,7 @@ def ask_shopb(
 
         matches = search_pinecone(
             search_query,
-            top_k=3
+            top_k=5
         )
 
 
