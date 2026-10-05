@@ -441,11 +441,11 @@ function App() {
                 <button
                   onClick={() =>
                     askSuggestion(
-                      "What payment methods are available?"
+                      "what shopb.africa offer"
                     )
                   }
                 >
-                  💳 Payments
+                  💳 Company Overview
                 </button>
 
                 <button
